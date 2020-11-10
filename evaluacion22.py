@@ -8,4 +8,22 @@
 #usuario ingrese el 0. Finalmente, mostrar la sumatoria de todos los números ingresados.
 
 #3
-#Hacer una función recursiva que imprima los números primos de 0 a n.   
+#Hacer una función recursiva que imprima los números primos de 0 a n. 
+
+def primos():
+    i=1
+    x = int(input("Enter the number:"))
+    for k in range (1, (x+1), 1):
+           c=0
+           for j in range (1, (i+1), 1):
+               a = i%j
+               if (a==0):
+                   c = c+1
+
+           if (c==2):
+                 print (i)
+           else:
+                 k = k-1
+
+           i=i+1
+primos()

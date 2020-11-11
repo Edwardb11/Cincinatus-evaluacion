@@ -6,10 +6,16 @@
 #2
 #Hacer una función recursiva que lea números enteros de teclado, hasta que el 
 #usuario ingrese el 0. Finalmente, mostrar la sumatoria de todos los números ingresados.
-def sumatoria():
-  acomulador=0
+
+def sumatoria(acomulador=0):
   n=int(input("Introduzca un numero: "))
-  
+  if n!=0:
+    if n>0:
+      acomulador+n
+      return sumatoria(acomulador+n)
+  else:
+    print(acomulador)
+sumatoria()
 #3
 #Hacer una función recursiva que imprima los números primos de 0 a n. 
 
@@ -28,4 +34,4 @@ def primos():
         k = k-1
 
         inicializador=inicializador+1
-primos()
+#primos()

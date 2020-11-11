@@ -1,7 +1,13 @@
 #1
 #Hacer una función recursiva que saque la suma de un numero dado y, dividirlo 
 #por sí mismo. Si ingreso 5 la suma es: >>> 5+4+3+2+1 = 15 dividido en 5 = 3.
-
+def suma(n=0):
+  n=int(input("Introduzca un numero: "))
+  if n<0:
+    return 0
+  else:
+    return suma(n-1)
+    
 
 #2
 #Hacer una función recursiva que lea números enteros de teclado, hasta que el 
@@ -15,23 +21,26 @@ def sumatoria(acomulador=0):
       return sumatoria(acomulador+n)
   else:
     print(acomulador)
-sumatoria()
+#sumatoria()
 #3
 #Hacer una función recursiva que imprima los números primos de 0 a n. 
 
-def primos():
-  inicializador=1
-  Primo = int(input("Enter the number:"))
-  for k in range (1, (Primo+1), 1):
-    c=0
-    for j in range (1, (Primo+1), 1):
-      a = inicializador%j
-      if (a==0):
-        c = c+1
-      if (c==2):
-        print (inicializador)
-      else:
-        k = k-1
+def primos(numero,c):
+  #inicializador=1
+  #Primo = int(input("Enter the number:"))
 
-        inicializador=inicializador+1
+  if numero%c==0 and numero==1:
+      return False
+  elif c>numero/2:
+      return True
+  else:
+      return primos(numero,c+1)
+
+#numero=int(input(("Digite un numero: ")))
+#if primos(numero,2):
+#    print("Es primo")
+#else:
+#      print("No")
+
+#primos()
 #primos()

@@ -1,14 +1,17 @@
 #1
 #Hacer una función recursiva que saque la suma de un numero dado y, dividirlo 
 #por sí mismo. Si ingreso 5 la suma es: >>> 5+4+3+2+1 = 15 dividido en 5 = 3.
-def suma(n=0):
-  n=int(input("Introduzca un numero: "))
-  if n<0:
-    return 0
+def suma(n):
+  if n==1:
+    return 1
   else:
-    return suma(n-1)
-    
+    return n+suma((n-1)/n) #Recursion 
 
+
+print(suma(5))    
+#n=int(input("Introduzca un numero: "))
+#print(f"La suma del numero es {suma(n)}")
+#print(f"La division de la suma numero es {suma(n/n)}")
 #2
 #Hacer una función recursiva que lea números enteros de teclado, hasta que el 
 #usuario ingrese el 0. Finalmente, mostrar la sumatoria de todos los números ingresados.

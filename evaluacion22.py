@@ -5,13 +5,13 @@ def suma(n):
   if n==1:
     return 1
   else:
-    return n+suma(n-1)
-
+        return n+suma(n-1)
+    
 def dividir(n):
     return suma(n)/n
 
-print(suma(5))
-print(dividir(5))    
+#print(suma(5))
+#print(dividir(5))    
 
 #2
 #Hacer una función recursiva que lea números enteros de teclado, hasta que el 
@@ -28,29 +28,15 @@ def sumatoria(acomulador=0):
 #sumatoria()
 #3
 #Hacer una función recursiva que imprima los números primos de 0 a n. 
-primos = []
- 
-def es_primo(numero):
-    # Hacemos bucle desde 2 hasta el anterior al número
-    for i in range(2, numero):
-        # calculamos el resto. Si es cero => no es primo
-        if numero % i == 0:
-            return False
-    return True
- 
-def calcularCantidadPrimosEnIntervalo(a, b):
-    if a < 2 or b < 2:
-        print ('Deben ser mayores que 1')
+def esPrimo(n,cont=2):
+  if (n % cont == 0 or n < 2):
         return False
- 
-    if es_primo(a):
-        primos.append(a)
- 
-    if a == b:
-        print ('Hemos encontrado: %s primos' % len(primos))
-        print (primos)
-        return
- 
-    calcularCantidadPrimosEnIntervalo(a+1, b)
- 
-#calcularCantidadPrimosEnIntervalo(2, 51)
+  elif (cont > n/2):
+        return True
+        return esPrimo(n, cont+1)
+
+def tabla_de_primos(n):
+    if esPrimo == True:
+        for elementos in range(2,n+1):
+            print (elementos)
+tabla_de_primos(10)

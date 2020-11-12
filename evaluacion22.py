@@ -5,10 +5,10 @@ def suma(n):
   if n==1:
     return 1
   else:
-    return n+suma((n-1)/n) #Recursion 
+    return n+suma(n-1)//suma(n) #Recursion 
 
 
-print(suma(5))    
+#print(suma(5))    
 #n=int(input("Introduzca un numero: "))
 #print(f"La suma del numero es {suma(n)}")
 #print(f"La division de la suma numero es {suma(n/n)}")
@@ -27,23 +27,13 @@ def sumatoria(acomulador=0):
 #sumatoria()
 #3
 #Hacer una función recursiva que imprima los números primos de 0 a n. 
-
-def primos(numero,c):
-  #inicializador=1
-  #Primo = int(input("Enter the number:"))
-
-  if numero%c==0 and numero==1:
-      return False
-  elif c>numero/2:
-      return True
-  else:
-      return primos(numero,c+1)
-
-#numero=int(input(("Digite un numero: ")))
-#if primos(numero,2):
-#    print("Es primo")
-#else:
-#      print("No")
-
-#primos()
-#primos()
+def primos(n):
+  losprimos=[]
+  for i in range(2,n):
+    if (n%i==0):
+      print("")
+    else:
+      losprimos.append( i)
+      return losprimos
+n=int(input("Indroduzca el limite de numero primos: "))
+print(primos(n))

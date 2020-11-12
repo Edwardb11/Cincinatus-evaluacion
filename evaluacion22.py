@@ -33,9 +33,9 @@ def esPrimo(n,cont=2):
   if (n % cont == 0 or n < 2):
     return False
   else:
-    return True    #return esPrimo(n, cont+1)
+    return True    
 
-def primeList(n):
+def primoList(n):
    primos = []
    for i in range(0,n):
       if esPrimo(i):
@@ -44,4 +44,4 @@ def primeList(n):
 
 
 
-primeList(20)
+primoList(20)

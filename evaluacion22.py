@@ -43,7 +43,7 @@ def primoList(n,x=0):
         print(x)
    primoList(n,x + 1)
 
-primoList(20)
+#primoList(20)
 
 
 #Primos sin recursividad

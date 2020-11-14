@@ -26,6 +26,7 @@ def sumatoria(acomulador=0):
   else:
     print(acomulador)
 #sumatoria()
+
 #3
 #Hacer una función recursiva que imprima los números primos de 0 a n. 
 #dos divisores positivos distintos: él mismo y el 1.
@@ -35,13 +36,26 @@ def esPrimo(n,cont=2):
   else:
     return True    
 
+def primoList(n,x=0):
+   if n == x:
+      return
+   if esPrimo(x):
+        print(x)
+   primoList(n,x + 1)
+
+primoList(20)
+
+
+#Primos sin recursividad
+def Primo(n,cont=2):
+  if (n % cont == 0 or n < 2):
+    return False
+  else:
+    return True    
+
 def primoList(n):
    primos = []
    for i in range(0,n):
-      if esPrimo(i):
+      if Primo(i):
           primos.append(i)
    print(primos)
-
-
-
-primoList(20)

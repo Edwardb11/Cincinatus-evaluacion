@@ -53,7 +53,7 @@ def Primo(n,cont=2):
   else:
     return True    
 
-def primoList(n):
+def Lista(n):
    primos = []
    for i in range(0,n):
       if Primo(i):

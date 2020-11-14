@@ -5,13 +5,14 @@ def suma(n):
   if n==1:
     return 1
   else:
-        return n+suma(n-1)
-    
+     return n+suma(n-1)
+     
 def dividir(n):
-    return suma(n)/n
+  print(suma(n))
+  return suma(n)//n
 
-#print(suma(5))
-#print(dividir(5))    
+#Llamar la funcion dividir
+print(dividir(5))  
 
 #2
 #Hacer una función recursiva que lea números enteros de teclado, hasta que el 
